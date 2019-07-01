@@ -1,0 +1,60 @@
+<div class="row">
+  <div class="col-12">
+    <h3>Central Casting</h3>
+  </div>
+</div>
+<div class="row">
+  <div class="col-6">
+    <button class="btn btn-lg btn-primary" (click)="wizardGenerator()">
+      This is my life...
+    </button>
+  </div>
+  <div class="col-6">
+    <ul>
+      <li>Cultural Modifier (CuMod): {{character.cumod}}</li>
+      <li>Social Level Modifier (SolMod): {{character.solmod}}</li>
+      <li>Birth Modifier (BiMod): {{character.bimod}}</li>
+      <li>Legitimacy Modifier (LegitMod): {{character.legitmod}}</li>
+      <li>Title Modifier (TiMod): {{character.timod}}</li>
+    </ul>
+  </div>
+</div>
+<div class="row">
+  <div class="col-6">
+      <div class="form-group row">
+          <label for="name" class="col-sm-2 col-form-label">Name</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="name">
+          </div>
+        </div>
+  </div>
+  <div class="col-3">
+      <div class="form-group row">
+          <label for="sex" class="col-sm-2 col-form-label">Sex</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="sex">
+          </div>
+        </div>
+  </div>
+  <div class="col-3">
+    <table-c101 ([character])="character"></table-c101>
+  </div>
+</div>
+<table-c102 ([character])="character"></table-c102>
+<table-c103 ([character])="character"></table-c103>
+<table-c758 ([character])="character"></table-c758>
+<div class="form-group row">
+  <div class="col-6"><table-c104 ([character])="character"></table-c104></div>
+  <div class="col-6"><table-c105 ([character])="character"></table-c105></div>
+</div>
+<table-c106 ([character])="character"></table-c106>
+<div class="form-group row">
+  <div class="col-9"><table-c107 ([character])="character"></table-c107></div>
+  <div class="col-3"><table-c108 ([character])="character"></table-c108></div>
+</div>
+<div class="form-grouup row">
+  <div class="col-6"><table-c109 ([character])="character"></table-c109></div>
+  <div class="col-6"><table-c110 ([character])="character"></table-c110></div>
+</div>
+<table-c112 ([character])="character"></table-c112>
+<table-c114 ([character])="character"></table-c114>

@@ -1,0 +1,21 @@
+
+<div class="input-group mb-3">
+    <select class="form-control" [(ngModel)]="character.race">
+      <option value="" selected="selected">Select...</option>
+      <option value="Human">Human</option>
+      <option value="Elf">Elf</option>
+      <option value="Dwarf">Dwarf</option>
+      <option value="Halfling">Halfling</option>
+      <option value="Half-Elf">Half-Elf</option>
+      <option value="Beastman">Beastman</option>
+      <option value="Reptileman">Reptileman</option>
+      <option value="Orc">Orc</option>
+      <option value="Half-Orc">Half-Orc</option>
+    </select>
+    <div class="input-group-append">
+      <button class="btn btn-info" type="button" id="button-tc101" (click)="generate()">
+          <i class="fas fa-random"></i>
+      </button>
+    </div>
+  </div>
+  

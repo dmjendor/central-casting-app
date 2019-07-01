@@ -1,0 +1,79 @@
+<ng-container *ngIf="table">
+    <div class="modal-header">
+      <!--
+<h4 *ngIf="editMode" class="modal-title" id="modal-basic-title">Edit {{table.name}}</h4>
+      -->
+      <h4 *ngIf="!editMode" class="modal-title" id="modal-basic-title">New Table</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="row">
+        <div class="col-12">
+          <form #tableForm="ngForm">
+            <div class="form-group row">
+              <div class="col-12">
+                <label for="name">Name</label>
+                <input #name="ngModel"
+                  [(ngModel)]="table.name"
+                  id="name"
+                  name="name"
+                  type="text"
+                  class="form-control"
+                />
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-12">
+                <label for="top">Top</label>
+                <input #name="ngModel"
+                  [(ngModel)]="table.top"
+                  id="top"
+                  name="top"
+                  type="number"
+                  class="form-control"
+                />
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-12">
+                <label for="mod">mod</label>
+                <select #mod="ngModel"
+                  [(ngModel)]="table.mod"
+                  id="mod"
+                  name="mod"
+                  class="form-control"
+                >
+                  <option value="">No Modifier</option>
+                  <option value="timod">Title Mod</option>
+                  <option value="cumod">Culture Mod</option>
+                  <option value="solmod">Social Level Mod</option>
+                  <option value="bimod">Birth Mod</option>
+                  <option value="legitmod">Legitimacy Mod</option>
+                </select>
+              </div>
+            </div>
+
+  
+          </form>
+        </div>
+    
+      </div>
+    </div>
+    <div class="modal-footer">
+        <div class="col-12">
+            <div class="btn-group btn-group-lg d-flex" role="group" aria-label="..."> 
+                <button class="btn btn-primary w-100" (click)="save()">
+                  Save
+                </button>
+                <button type="button" class="btn btn-primary w-100" (click)="cancel()">
+                  Cancel
+                </button>
+                <button type="button" class="btn btn-danger w-100" (click)="delete()">
+                  Delete
+                </button>
+            </div>
+        </div>
+    </div>
+  </ng-container>

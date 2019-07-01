@@ -1,0 +1,22 @@
+<ngb-tabset type="pills" #tabs [activeId]="selectedTab">
+  <ngb-tab title="Casting" id="casting">
+    <ng-template ngbTabContent>
+      <div class="row">
+        <div class="col-6"><table-list [(table)]="selectedTable"></table-list></div>
+        <div class="col-6"><manage-casting [table]="selectedTable"></manage-casting></div>
+      </div>
+      
+    </ng-template>
+  </ngb-tab>
+  <ngb-tab title="Themes" id="themes">
+    <ng-template ngbTabContent>
+      b
+    </ng-template>
+  </ngb-tab>
+  <ngb-tab title="Characters" id="characters">
+    <ng-template ngbTabContent>
+      C
+    </ng-template>
+  </ngb-tab>
+                              
+</ngb-tabset>

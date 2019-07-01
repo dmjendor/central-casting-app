@@ -1,0 +1,199 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.css';
+@import '~@fortawesome/fontawesome-pro/css/all.css';
+@import '~ngx-toasta/styles/style-bootstrap.css';
+@import '~@swimlane/ngx-datatable/release/index.css';
+@import '~@swimlane/ngx-datatable/release/themes/bootstrap.css';
+@import '~@swimlane/ngx-datatable/release/assets/icons.css';
+
+$primary-color: navy;
+$primary-color-hover: teal;
+$secondary-color: blue;
+$secondary-color-hover: aqua;
+
+#toasta .toast.toasta-theme-bootstrap.toasta-type-info {
+  background-color: $primary-color-hover;
+}
+
+body {
+    padding-top: 70px;
+}
+
+h1, h2, h3 { 
+  margin-bottom: 1.5rem;
+}
+
+.headerTitle{
+  color:#663300;
+  font-family: 'Pacifico', cursive;
+}
+
+.navbar { 
+  border-bottom: 3px solid $primary-color;
+}
+
+.navbar-light .navbar-brand {
+  color: $primary-color;
+  font-size: 24px;
+  padding-bottom: 0px !important;
+}
+
+.navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
+  color: $primary-color-hover;
+}
+
+.list-group-item.active {
+  background-color: $primary-color;
+  border-color: $primary-color;
+}
+
+.btn {
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background-color: $primary-color;
+  border-color: $primary-color;
+}
+
+.btn-primary:hover {
+  background-color: $primary-color-hover;
+  border-color: $primary-color-hover;
+}
+
+.btn-primary.disabled, .btn-primary:disabled {
+  background-color: $primary-color;
+  border-color: $primary-color;
+}
+
+.form-control:focus {
+  border-color: $primary-color;
+}
+
+.bg-primary {
+  background-color: $primary-color !important;
+}
+
+.ngx-datatable.bootstrap .datatable-body .datatable-body-row.active {
+  background-color: $primary-color;
+  color: #FFF;
+}
+
+.ngx-datatable.bootstrap .datatable-body .datatable-body-row .datatable-body-cell {
+  padding: 0.25rem;
+}
+
+.ngx-datatable.bootstrap .datatable-header .datatable-header-cell {
+  padding: 0.25rem 0;
+}
+
+.ngx-datatable.scroll-vertical {
+  height: 65vh;
+}
+.ngx-datatable .datatable-body {
+  max-height: 65vh !important;
+  overflow: auto !important;
+}
+
+.ngx-datatable .datatable-body.preptable {
+  max-height: 40vh !important;
+  overflow-x: auto !important;
+}
+
+.card-header {
+  background-color: $primary-color;
+}
+
+.card-header > h5 > .btn {
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+.top-margin {
+  margin-top: 10px;
+}
+
+.top-margin-small {
+  margin-top: 5px;
+}
+
+.textRight > .datatable-body-cell-label {
+    text-align: right;
+}
+
+.textCenter > .datatable-header-cell-template-wrap {
+  float: right;
+}
+
+.textRight > .datatable-header-cell-template-wrap {
+  text-align: center;
+}
+
+hr.navbar-dropdown {
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+  border-top: 1px solid $primary-color;
+}
+
+.navbar {
+  padding: 0.5rem !important;
+}
+
+.pull-right {
+  float: right;
+}
+
+.hidden-body {
+  display: none !important;
+}
+
+
+.bs-popover-right {
+  margin-left: 0 !important;
+  max-width: 100% !important;
+}
+
+
+.mobileTop {
+  margin-top: 10px;
+}
+
+.mobileHide {
+  display: inherit;
+}
+
+li.nav-item {
+  width: 196px;
+  text-align: right;
+}
+
+.navbar-expand .navbar-nav .dropdown-menu {
+  right: 0px;
+}
+
+@media (max-width: 600px) {
+  .mobileHide.datatable-body-cell {
+    display: none !important;
+  }
+  .ngx-datatable .datatable-header .datatable-header-cell.mobileHide {
+    display: none !important;
+  }
+
+  .bs-popover-bottom, .bs-popover-auto[x-placement^="bottom"] {
+    margin-top: 0px !important;
+  }
+
+
+}
+
+@media screen and (min-width: 600px) {
+  /* CSS that should be displayed if width is equal to or less than 600px goes here */
+  .mobileTop {
+    margin-top: 0px;
+  }
+}

@@ -1,0 +1,36 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Tables</h5>
+        
+      <div class="card-text">
+          <div class="row" *ngIf="tableList">
+              <div class="col-12">
+                <ngx-datatable
+                  class="bootstrap"
+                  [rows]="tableList"
+                  [columns]="columns"
+                  [selected]="selected"
+                  [selectionType]="'single'"
+                  (select)='onSelect($event)'>
+                  >
+                  <ngx-datatable-column name="Name"></ngx-datatable-column>
+                  <ngx-datatable-column name="Top"></ngx-datatable-column>
+                  <ngx-datatable-column name="Mod"></ngx-datatable-column>
+                </ngx-datatable>
+                
+              </div>
+            </div>
+      </div>
+  </div>
+  <div class="card-footer">
+    <div class="row">
+      <div class="col-12">
+        <div class="btn-group btn-group-lg d-flex" role="group" aria-label="..."> 
+          <button type="button" class="btn btn-secondary btn-primary w-100" (click)="createTable()">Create</button>
+          <button type="button" class="btn btn-secondary btn-info w-100" (click)="editTable()">Edit</button>
+          <button type="button" class="btn btn-secondary btn-danger w-100" (click)="deleteTable()">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

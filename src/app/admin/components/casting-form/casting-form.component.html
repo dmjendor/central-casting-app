@@ -1,0 +1,295 @@
+<ng-container *ngIf="casting">
+    <div class="modal-header">
+      <!--
+<h4 *ngIf="editMode" class="modal-title" id="modal-basic-title">Edit {{casting.name}}</h4>
+      -->
+      <h4 *ngIf="!editMode" class="modal-title" id="modal-basic-title">New Detail</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="row">
+        <div class="col-12">
+          <form #castingForm="ngForm">
+            <div class="form-group row">
+              <div class="col-12">
+                <label for="name">Name</label>
+                <input #name="ngModel"
+                  [(ngModel)]="casting.name"
+                  id="name"
+                  name="name"
+                  type="text"
+                  class="form-control"
+                />
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <div class="col-12">
+                <label for="description">Description</label>
+                <input #description="ngModel"
+                  [(ngModel)]="casting.description"
+                  id="description"
+                  name="description"
+                  type="text"
+                  class="form-control"
+                />
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-6">
+                <label for="bottom">Bottom</label>
+                <input #bottom="ngModel"
+                  [(ngModel)]="casting.bottom"
+                  id="bottom"
+                  name="bottom"
+                  type="number"
+                  class="form-control"
+                /></div>
+              <div class="col-6">
+                <label for="top">Top</label>
+                <input #top="ngModel"
+                  [(ngModel)]="casting.top"
+                  id="top"
+                  name="top"
+                  type="number"
+                  class="form-control"
+                /></div>
+            </div>
+            <div class="form-group row">
+              <div class="col-6">
+                <label for="linktable">Link Tables</label>
+                <input #linktable="ngModel"
+                  [(ngModel)]="casting.linktable"
+                  id="linktable"
+                  name="linktable"
+                  type="text"
+                  class="form-control"
+                />
+              </div>
+              <div class="col-6">
+                  <label for="linkmultiple">Link Multiples</label>
+                  <input #linkmultiple="ngModel"
+                  [(ngModel)]="casting.linkmultiple"
+                  id="linkmultiple"
+                  name="linkmultiple"
+                  type="text"
+                  class="form-control"
+                />
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-6">
+                  <label for="multiplernd">Randomize Multiples</label>
+                  <input #multiplernd="ngModel"
+                  [(ngModel)]="casting.multiplernd"
+                  id="multiplernd"
+                  name="multiplernd"
+                  type="text"
+                  class="form-control"
+                />
+              </div>
+              <div class="col-6">
+                  <label for="multiplemod">Multiple Modifiers</label>
+                  <input #linkroll="ngModel"
+                  [(ngModel)]="casting.multiplemod"
+                  id="multiplemod"
+                  name="multiplemod"
+                  type="text"
+                  class="form-control"
+                />
+              </div>
+            </div>
+            <div class="form-group row">
+              
+              <div class="col-6">
+                  <label for="linkroll">Link Roll</label>
+                  <input #linkroll="ngModel"
+                  [(ngModel)]="casting.linkroll"
+                  id="linkroll"
+                  name="linkroll"
+                  type="number"
+                  class="form-control"
+                />
+              </div>
+              
+            </div>
+            <div class="form-group row">
+              <div class="col-6">
+                <label for="light">Light Trait</label>
+                <input #light="ngModel"
+                [(ngModel)]="casting.light"
+                id="light"
+                name="light"
+                type="number"
+                class="form-control"
+              /></div>
+              <div class="col-6">
+                <label for="dark">Dark Trait</label>
+                <input #dark="ngModel"
+                [(ngModel)]="casting.dark"
+                id="dark"
+                name="dark"
+                type="number"
+                class="form-control"
+              /></div>
+            </div>
+            <div class="form-group row">
+              <div class="col-6">
+                <label for="neutral">Neutral Trait</label>
+                <input #neutral="ngModel"
+                [(ngModel)]="casting.neutral"
+                id="neutral"
+                name="neutral"
+                type="number"
+                class="form-control"
+              /></div>
+              <div class="col-6">
+                  <label for="exotic">Exotic Trait</label>
+                  <input #exotic="ngModel"
+                  [(ngModel)]="casting.exotic"
+                  id="exotic"
+                  name="exotic"
+                  type="number"
+                  class="form-control"
+                />
+              </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-6">
+                    <label for="exotic">Random Trait</label>
+                    <input #random="ngModel"
+                    [(ngModel)]="casting.random"
+                    id="random"
+                    name="random"
+                    type="number"
+                    class="form-control"
+                  />
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-6">
+                    <label for="solmod">Social Mod</label>
+                    <input #solmod="ngModel"
+                    [(ngModel)]="casting.solmod"
+                    id="solmod"
+                    name="solmod"
+                    type="number"
+                    class="form-control"
+                  />
+                </div>
+                <div class="col-6">
+                    <label for="cumod">Culture Mod</label>
+                    <input #cumod="ngModel"
+                    [(ngModel)]="casting.cumod"
+                    id="cumod"
+                    name="cumod"
+                    type="number"
+                    class="form-control"
+                  />
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-6">
+                    <label for="bimod">Birth Mod</label>
+                    <input #bimod="ngModel"
+                    [(ngModel)]="casting.bimod"
+                    id="bimod"
+                    name="bimod"
+                    type="number"
+                    class="form-control"
+                  />
+                </div>
+                <div class="col-6">
+                    <label for="legitmod">Legitimacy Mod</label>
+                    <input #bimod="ngModel"
+                    [(ngModel)]="casting.legitmod"
+                    id="legitmod"
+                    name="legitmod"
+                    type="number"
+                    class="form-control"
+                  />
+                </div>
+            </div>
+            
+            <div class="form-group row">
+
+                <div class="col-6">
+                    <label for="timod">Title Mod</label>
+                    <input #timod="ngModel"
+                    [(ngModel)]="casting.timod"
+                    id="timod"
+                    name="timod"
+                    type="number"
+                    class="form-control"
+                  />
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-6">
+                    <label for="cumod">Culture Mod</label>
+                    <input #cumod="ngModel"
+                    [(ngModel)]="casting.cumod"
+                    id="cumod"
+                    name="cumod"
+                    type="number"
+                    class="form-control"
+                  />
+                </div>
+
+            </div>
+            <div class="form-group row">
+                <div class="col-6">
+                    <label for="landholdings">Land Holdings</label>
+                    <input #landholdings="ngModel"
+                    [(ngModel)]="casting.landholdings"
+                    id="landholdings"
+                    name="landholdings"
+                    type="text"
+                    class="form-control"
+                  />
+                </div>
+                <div class="col-6">
+                    <label for="landtitles">Land Titles</label>
+                    <input #landtitles="ngModel"
+                    [(ngModel)]="casting.landtitles"
+                    id="landtitles"
+                    name="landtitles"
+                    type="text"
+                    class="form-control"
+                  />
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-6">
+                    <label for="size">Land Size</label>
+                    <input #size="ngModel"
+                    [(ngModel)]="casting.size"
+                    id="size"
+                    name="size"
+                    type="text"
+                    class="form-control"
+                  />
+                </div>  
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+        <div class="col-12">
+            <div class="btn-group btn-group-lg d-flex" role="group" aria-label="..."> 
+                <button class="btn btn-primary w-100" (click)="save()">
+                  Save
+                </button>
+                <button type="button" class="btn btn-primary w-100" (click)="cancel()">
+                  Cancel
+                </button>
+                <button type="button" class="btn btn-danger w-100" (click)="delete()">
+                  Delete
+                </button>
+            </div>
+        </div>
+    </div>
+  </ng-container>
